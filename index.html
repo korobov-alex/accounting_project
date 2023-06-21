@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>Personal accountant 2023 edition <img src="img/icon.png"></h2>
+            <div class="row">
+                <select type="text" id="dropdown" placeholder="Your text">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+                <button onclick="saveData()">Calculate</button>
+            </div>
+            <div class="payments">
+                <input type="number" id="income" placeholder="Month income" required>
+                <input type="number" id="apartment_payment" placeholder="Apartment payment" required>
+                <input type="number" id="food_payment" placeholder="Food payment" required>
+                <input type="number" id="hobby_payment" placeholder="Hobby payment" required>
+                <input type="number" id="other_payments" placeholder="Other payments" required>    
+                <p id="result"></p>
+            </div><h5>Instruction:
+                Please, provide your month payment data and we'll create a short brief about your current financial situation.
+            </h5>
+            <button class ="year" onclick="yearCharts()">Year summary</button>
+        </div>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
