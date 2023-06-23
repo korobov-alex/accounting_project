@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>Personal accountant 2023 edition <img src="img/icon.png"></h2>
+            <h2>Personal accountant<img src="img/icon.png"></h2>
             <div class="row">
                 <select type="text" id="dropdown" placeholder="Your text">
-                    <option value="january">January</option>
-                    <option value="february">February</option>
-                    <option value="march">March</option>
-                    <option value="april">April</option>
-                    <option value="june">June</option>
-                    <option value="july">July</option>
-                    <option value="august">August</option>
-                    <option value="september">September</option>
-                    <option value="october">October</option>
-                    <option value="november">November</option>
-                    <option value="december">December</option>
+                    <option value="January" selected>January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
                 </select>
-                <button onclick="saveData()">Calculate</button>
+                <select id='date-dropdown'>
+                </select>
+                <button onclick="saves()">Calculate</button>
             </div>
             <div class="payments">
                 <input type="number" id="income" placeholder="Month income" required>
@@ -32,13 +35,18 @@
                 <input type="number" id="food_payment" placeholder="Food payment" required>
                 <input type="number" id="hobby_payment" placeholder="Hobby payment" required>
                 <input type="number" id="other_payments" placeholder="Other payments" required>    
-                <p id="result"></p>
             </div><h5>Instruction:
                 Please, provide your month payment data and we'll create a short brief about your current financial situation.
             </h5>
-            <button class ="year" onclick="yearCharts()">Year summary</button>
+            <div class="row2">
+                <select id='year-date-dropdown'></select>
+                <button class ="year" onclick="yearCharts()">Year summary</button>
+                
+            </div>
+
+            </select>
         </div>    
     </div>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

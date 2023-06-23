@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Year report</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="general">
             <canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+            <button class ="excel" onclick="downloadExcelWithChart()">Donwload Excel</button>
         </div>
     </div>
-    <script src="year.js"></script>
+    <script src="scripts/year.js"></script>
 </body>
 </html>
