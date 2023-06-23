@@ -26,12 +26,19 @@ let monthArray = [
   "December",
 ];
 
+//checking the presence of an object for the needed year
+
+if (obj === null) {
+    alert(`There is no data for the ${year} year. Please, provide it first.`)
+    window.close()
+  }
+
+
 // Get the month data for the year
 
 const monthData = obj[year];
 
 // Function to get the data for a specific month
-
 function getMonthData(month) {
   if (monthData[month]?.totalSavings === null) {
     monthData[month].totalSavings = 0;
@@ -40,6 +47,7 @@ function getMonthData(month) {
     monthData[month] = { totalSavings: 0 };
   }
   return monthData[month];
+  console.log(monthData)
 }
 
 // Create an array of savings values for each month
