@@ -43,6 +43,7 @@
     margin-bottom: 25px;
 }
 
+
 .row2{
     display: flex;
     align-items: center;
@@ -50,6 +51,7 @@
     background: #edeef0;
     border-radius: 30px;
     padding-left: 20px;
+    margin-top: 15px;
     margin-bottom: 25px;
 }
 
@@ -117,11 +119,4 @@ input {
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
-}
-
-.todo-app .year{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

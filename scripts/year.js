@@ -47,7 +47,6 @@ function getMonthData(month) {
     monthData[month] = { totalSavings: 0 };
   }
   return monthData[month];
-  console.log(monthData)
 }
 
 // Create an array of savings values for each month
@@ -126,4 +125,41 @@ function deleteLatestDate() {
 
 createYearChart(savingsArray);
 deleteLatestDate();
+
+//describing the data format for an Excel file
+
+let data = [
+  [`${year}`, "Month", "Total income", "Apartment", "Food", "Hobby", "Other", "Month savings"]
+];
+
+//creating the loop for a fulfilling an array with Excel data
+if (obj.hasOwnProperty(year)) {
+  const yearObj = obj[year];
+  for (let month in yearObj) {
+    const monthData = yearObj[month];
+    const row = [
+      `${year}`,
+      month,
+      monthData.income,
+      monthData.apartmentPayment,
+      monthData.foodPayment,
+      monthData.hobbyPayment,
+      monthData.otherPayments,
+      monthData.totalSavings
+    ];
+    data.push(row);
+  }
+}
+
+//creating the function for a Excel file downloading
+
+document.getElementById("excel").onclick = () => { 
+  var workbook = XLSX.utils.book_new(),
+    worksheet = XLSX.utils.aoa_to_sheet(data);
+workbook.SheetNames.push("First");
+workbook.Sheets["First"] = worksheet;
+XLSX.writeFile(workbook, `${year}_financialSummary.xlsx`);
+};
+
+
 

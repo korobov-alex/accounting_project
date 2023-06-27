@@ -79,7 +79,7 @@ function createAdvice() {
   // Set the innerHTML of adviceInfo with the calculated values
 
   adviceInfo.innerHTML = `So, based on the data that you were provided we can summarize:
-    <b>Your month salary:</b>${income}$.<br>
+    <b>Your month salary: </b>${income}$.<br>
     <b>Your monthly payment (including all of your payments):</b> ${allPayments}$.<br>
     <b>The amount of the money that you can save:</b> ${currentMonthLeftover}$`;
 

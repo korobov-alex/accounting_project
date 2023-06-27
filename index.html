@@ -27,7 +27,7 @@
                 </select>
                 <select id='date-dropdown'>
                 </select>
-                <button onclick="saves()">Calculate</button>
+                <button class="first" onclick="saves()">Calculate</button>
             </div>
             <div class="payments">
                 <input type="number" id="income" placeholder="Month income" required>
@@ -39,12 +39,10 @@
                 Please, provide your month payment data and we'll create a short brief about your current financial situation.
             </h5>
             <div class="row2">
-                <select id='year-date-dropdown'></select>
+                <select id='year-date-dropdown'>
+                </select>
                 <button class ="year" onclick="yearCharts()">Year summary</button>
-                
             </div>
-
-            </select>
         </div>    
     </div>
     <script src="scripts/script.js"></script>
