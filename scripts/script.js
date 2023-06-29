@@ -73,30 +73,50 @@ let income = document
   .getElementById("income")
   .addEventListener("change", function () {
     income = Number(this.value);
+    if(income < 0){
+      alert("Your salary can't be lower than 0")
+      income = 0; 
+    }
   });
 
 let apartmentPayment = document
   .getElementById("apartment_payment")
   .addEventListener("change", function () {
     apartmentPayment = Number(this.value);
+    if(apartmentPayment < 0){
+      alert("Your apartment payments can't be lower than 0")
+      apartmentPayment = 0; 
+    }
   });
 
 let foodPayment = document
   .getElementById("food_payment")
   .addEventListener("change", function () {
     foodPayment = Number(this.value);
+    if(foodPayment < 0){
+      alert("Your food payments can't be lower than 0")
+      foodPayment = 0; 
+    }
   });
 
 let hobbyPayment = document
   .getElementById("hobby_payment")
   .addEventListener("change", function () {
     hobbyPayment = Number(this.value);
+    if(hobbyPayment < 0){
+      alert("Your hobby payments can't be lower than 0")
+      hobbyPayment = 0; 
+    }
   });
 
 let otherPayments = document
   .getElementById("other_payments")
   .addEventListener("change", function () {
     otherPayments = Number(this.value);
+    if(otherPayments < 0){
+      alert("Your additionals payments can't be lower than 0")
+      otherPayments = 0; 
+    }
   });
 
 // Function to save the selected date to localStorage

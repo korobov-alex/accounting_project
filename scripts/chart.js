@@ -5,16 +5,16 @@ let month = localStorage.getItem("Month");
 
 // Retrieve the object string from localStorage and parse it into an object
 
-var objString = localStorage.getItem("Data");
-var obj = JSON.parse(objString);
+let objString = localStorage.getItem("Data");
+let obj = JSON.parse(objString);
 
 // Extract the income and payment values from the object
 
-var income = obj[year][month]["income"];
-var apartment = obj[year][month]["apartmentPayment"];
-var food = obj[year][month]["foodPayment"];
-var hobby = obj[year][month]["hobbyPayment"];
-var other = obj[year][month]["otherPayments"];
+let income = obj[year][month]["income"];
+let apartment = obj[year][month]["apartmentPayment"];
+let food = obj[year][month]["foodPayment"];
+let hobby = obj[year][month]["hobbyPayment"];
+let other = obj[year][month]["otherPayments"];
 
 // Function for creating a chart using Chart.js library
 
